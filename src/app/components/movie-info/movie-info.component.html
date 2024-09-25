@@ -1,0 +1,7 @@
+<mat-card class="movie-info-container" (click)="redirectTo(data.id)">
+    <img [src]="'https://image.tmdb.org/t/p/w500' + data.poster_path" class="poster">
+    <mat-card-content class="movie-info-content">
+        <span class="movie-title">{{ data.title }} </span>
+        <span> Puntuación: {{ data.vote_average }}</span>
+    </mat-card-content>
+</mat-card>

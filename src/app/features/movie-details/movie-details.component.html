@@ -1,0 +1,26 @@
+<mat-card class="movie-details-container">
+    <mat-card-content class="movie-details-content">
+        <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path">
+        <div class="movie-details-flex-info">
+            <h1 class="movie-title"> {{movie.title }}</h1>
+            <h1 class="movie-description"> {{ movie.overview }}</h1>
+            <div class="movie-more-details">
+                <strong class="movie-title-section">Puntuación</strong>
+                <div class="movie-vote section"> 
+                    <mat-icon fontIcon="star_rate"></mat-icon> 
+                    <span>{{movie.vote_average}} / 10</span>
+                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;Votos totales: {{ movie.vote_count }}</span>
+                </div>
+            </div>
+            <div class="movie-title-section"> <strong>Géneros</strong>
+                <mat-chip-set class="section">
+                    <mat-chip disabled *ngFor="let genre of movie.genres"> {{genre.name}} </mat-chip>
+                </mat-chip-set>
+            </div>
+            <div class="movie-extra-info"> 
+                <strong class="movie-title-section">Para ver mas detalles...</strong>
+                <button mat-button> <mat-icon fontIcon="play_circle_outline"></mat-icon></button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

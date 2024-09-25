@@ -1,0 +1,10 @@
+<form [formGroup]="searchForm">
+    <mat-form-field>
+        <!-- <mat-label>Outline form field</mat-label> -->
+        <input formControlName="movieTitle" matInput placeholder="Busca tu película">
+        <mat-icon matSuffix>search</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+
+    Resultado {{ searchForm.get('movieTitle')?.value}}
+</form>

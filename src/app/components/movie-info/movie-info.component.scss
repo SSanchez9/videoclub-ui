@@ -1,0 +1,35 @@
+.poster {
+    height: 100%;
+    width: 15rem;
+}
+
+.movie-info-container {
+    justify-content: space-between;
+    display: flex;
+    max-width: 17rem;
+    min-height: 31rem;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 15px;
+    color: #ffffff;
+    background-color: var(--color-2);
+    cursor: pointer;
+
+    .movie-info-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .movie-title {
+            width: 100%;
+            font-size: 150%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+        }
+    }
+
+}

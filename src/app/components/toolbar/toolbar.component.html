@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="title">
+        <span >Video Club Title</span>
+    </mat-toolbar-row>    
+    <mat-toolbar-row class="toolbar-buttons">
+        <ng-container *ngFor="let option of toolbarOptions">
+            <button mat-button [routerLink]="option.link">{{ option.title }}</button>
+        </ng-container>
+        <app-search-movie></app-search-movie>
+    </mat-toolbar-row>
+    
+</mat-toolbar>

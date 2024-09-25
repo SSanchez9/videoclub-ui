@@ -1,0 +1,9 @@
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* Crea 4 columnas de igual ancho */
+    gap: 2rem;
+    padding: 40px;
+    // height: 18rem;
+    /* Espacio entre columnas y filas */
+}
