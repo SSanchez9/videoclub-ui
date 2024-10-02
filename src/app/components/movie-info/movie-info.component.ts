@@ -13,6 +13,6 @@ export class MovieInfoComponent {
 
   constructor(private readonly router: Router) { }
   redirectTo(movieId: string): void {
-    this.router.navigateByUrl(`/${movieId}`)
+    this.router.navigateByUrl(`movie/${movieId}`)
   }
 }

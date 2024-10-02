@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PopularComponent } from './features/popular/popular.component';
 import { MovieDetailsComponent } from './features/movie-details/movie-details.component';
+import { SearchResultsComponent } from './features/search-results/search-results.component';
 
 const routes: Routes = [
   {
@@ -9,7 +10,11 @@ const routes: Routes = [
     component: PopularComponent
   },
   {
-    path: ':id',
+    path: 'search-results',
+    component: SearchResultsComponent
+  },
+  {
+    path: 'movie/:id',
     component: MovieDetailsComponent
   },
   {

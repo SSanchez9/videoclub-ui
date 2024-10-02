@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { SearchResultsComponent } from './features/search-results/search-results.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { MatInputModule } from '@angular/material/input';
     PopularComponent,
     MovieInfoComponent,
     MovieDetailsComponent,
-    SearchMovieComponent
+    SearchMovieComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,

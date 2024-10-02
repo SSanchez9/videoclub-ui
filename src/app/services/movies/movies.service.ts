@@ -9,7 +9,8 @@ import { ExtendedMovie } from '../../models/extended-movie-details.model';
 })
 export class MoviesService {
 
-  API_KEY = '014a3eaf10b049f8099057c70269734c'
+  private API_KEY = '014a3eaf10b049f8099057c70269734c';
+
   constructor(private readonly http: HttpClient) { }
 
   getPopularMovies(): Observable<MovieDetails[]> {
@@ -19,6 +20,12 @@ export class MoviesService {
   }
 
   getMovieDetails(movieId: string): Observable<ExtendedMovie> {
-    return this.http.get<ExtendedMovie>(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.API_KEY}&language=es-ES'`);
+    return this.http.get<ExtendedMovie>(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.API_KEY}&language=es-ES`);
+  }
+
+  searchMoviesByQuery(query: string): Observable<MovieDetails[]> {
+    return this.http.get<{ page: number, results: MovieDetails[], total_pages: number, total_results: number }>(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${this.API_KEY}&include_adult=true&language=es-ES`).pipe(
+      map((response: { page: number, results: MovieDetails[], total_pages: number, total_results: number }) => response.results)
+    );
   }
 }
